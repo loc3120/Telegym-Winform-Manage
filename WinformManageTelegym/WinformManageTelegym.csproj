@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9768BBD9-A8C2-4762-ACC0-E4E735DC91B9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WinformManageTelegym</RootNamespace>
+    <AssemblyName>WinformManageTelegym</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChildrenForm\FormAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForm\FormAddCustomer.Designer.cs">
+      <DependentUpon>FormAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForm\FormModifyCoach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForm\FormModifyCoach.Designer.cs">
+      <DependentUpon>FormModifyCoach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForm\FormModifyGeneralClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForm\FormModifyGeneralClass.Designer.cs">
+      <DependentUpon>FormModifyGeneralClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForm\FormContactCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForm\FormContactCustomer.Designer.cs">
+      <DependentUpon>FormContactCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForm\FormModifyAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForm\FormModifyAccount.Designer.cs">
+      <DependentUpon>FormModifyAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForm\FormModifyPrivateClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForm\FormModifyPrivateClass.Designer.cs">
+      <DependentUpon>FormModifyPrivateClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForm\FormRatingCoach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForm\FormRatingCoach.Designer.cs">
+      <DependentUpon>FormRatingCoach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForm\FormRegisterPrivateClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForm\FormRegisterPrivateClass.Designer.cs">
+      <DependentUpon>FormRegisterPrivateClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChildrenForm\FormReviewCandidate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildrenForm\FormReviewCandidate.Designer.cs">
+      <DependentUpon>FormReviewCandidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\PageDataStructure.cs" />
+    <Compile Include="Common\ResponseStructure.cs" />
+    <Compile Include="ConfigURL.cs" />
+    <Compile Include="Entity\AccessManagement.cs" />
+    <Compile Include="Entity\Candidate.cs" />
+    <Compile Include="Entity\Coach.cs" />
+    <Compile Include="Entity\Customer.cs" />
+    <Compile Include="Entity\GeneralClass.cs" />
+    <Compile Include="Entity\MembershipCard.cs" />
+    <Compile Include="Entity\PrivateClass.cs" />
+    <Compile Include="Entity\SearchObject.cs" />
+    <Compile Include="Entity\TrackingProgress.cs" />
+    <Compile Include="Entity\TryingPractice.cs" />
+    <Compile Include="Entity\User.cs" />
+    <Compile Include="FormManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManage.Designer.cs">
+      <DependentUpon>FormManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageCandidate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageCandidate.Designer.cs">
+      <DependentUpon>FormManageCandidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageCheckinAndCheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageCheckinAndCheckout.Designer.cs">
+      <DependentUpon>FormManageCheckinAndCheckout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageClass.Designer.cs">
+      <DependentUpon>FormManageClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageCoach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageCoach.Designer.cs">
+      <DependentUpon>FormManageCoach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageCustomer.Designer.cs">
+      <DependentUpon>FormManageCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManagePrivateClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManagePrivateClass.Designer.cs">
+      <DependentUpon>FormManagePrivateClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageTryingPractice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageTryingPractice.Designer.cs">
+      <DependentUpon>FormManageTryingPractice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageUser.Designer.cs">
+      <DependentUpon>FormManageUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChildrenForm\FormAddCustomer.resx">
+      <DependentUpon>FormAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForm\FormContactCustomer.resx">
+      <DependentUpon>FormContactCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForm\FormModifyAccount.resx">
+      <DependentUpon>FormModifyAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForm\FormModifyCoach.resx">
+      <DependentUpon>FormModifyCoach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForm\FormModifyGeneralClass.resx">
+      <DependentUpon>FormModifyGeneralClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForm\FormModifyPrivateClass.resx">
+      <DependentUpon>FormModifyPrivateClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForm\FormRatingCoach.resx">
+      <DependentUpon>FormRatingCoach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForm\FormRegisterPrivateClass.resx">
+      <DependentUpon>FormRegisterPrivateClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildrenForm\FormReviewCandidate.resx">
+      <DependentUpon>FormReviewCandidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManage.resx">
+      <DependentUpon>FormManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageCandidate.resx">
+      <DependentUpon>FormManageCandidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageCheckinAndCheckout.resx">
+      <DependentUpon>FormManageCheckinAndCheckout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageClass.resx">
+      <DependentUpon>FormManageClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageCoach.resx">
+      <DependentUpon>FormManageCoach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageCustomer.resx">
+      <DependentUpon>FormManageCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManagePrivateClass.resx">
+      <DependentUpon>FormManagePrivateClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageTryingPractice.resx">
+      <DependentUpon>FormManageTryingPractice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageUser.resx">
+      <DependentUpon>FormManageUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
